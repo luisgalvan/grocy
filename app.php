@@ -7,6 +7,7 @@ use Grocy\Middleware\CorsMiddleware;
 use Psr\Container\ContainerInterface as Container;
 use Slim\Factory\AppFactory;
 use Slim\Views\Blade;
+use Grocy\Helpers\ConfigurationValidator;
 
 // Load composer dependencies
 require_once __DIR__ . '/packages/autoload.php';

@@ -1,5 +1,6 @@
 <?php
-
+namespace Grocy\Helpers;
+use Exception;
 class ERequirementNotMet extends Exception
 {
 }
@@ -81,7 +82,7 @@ class PrerequisiteChecker
 
 	private function getSqlVersionAsString()
 	{
-		$dbh = new PDO('sqlite::memory:');
+		$dbh = new \PDO('sqlite::memory:');
 		return $dbh->query('select sqlite_version()')->fetch()[0];
 	}
 }

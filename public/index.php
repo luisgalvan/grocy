@@ -31,14 +31,14 @@ else
 	define('GROCY_DATAPATH', $datapath);
 }
 
-require_once __DIR__ . '/../helpers/PrerequisiteChecker.php';
+require_once __DIR__ . '/../packages/autoload.php';
 
-try
-{
+use Grocy\Helpers\PrerequisiteChecker;
+use Grocy\Helpers\ERequirementNotMet;
+
+try {
 	(new PrerequisiteChecker())->checkRequirements();
-}
-catch (ERequirementNotMet $ex)
-{
+} catch (ERequirementNotMet $ex) {
 	exit('Unable to run Grocy: ' . $ex->getMessage());
 }
 

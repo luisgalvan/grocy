@@ -1,5 +1,6 @@
 <?php
-
+namespace Grocy\Helpers;
+use Exception;
 class EInvalidConfig extends Exception
 {
 }
